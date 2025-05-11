@@ -9,6 +9,7 @@ const Home = () => {
   const handleToggleSign = () => {
     setToggleSign(!toggleSign);
   };
+  
 
   return (
     <div className="h-screen font-serif">
@@ -20,7 +21,7 @@ const Home = () => {
 
       <div className="flex flex-col items-center mt-5 ">
         <h2 className="text-xl text-black mb-4 ">
-          {toggleSign ? "Sign In" : "Sign Up"}
+          {toggleSign ? "Sign In" : "Create An Account"}
         </h2>
 
         {toggleSign ? <Login /> : <Signup />}
@@ -30,7 +31,7 @@ const Home = () => {
             ? "Don't have an account ? "
             : "Already have an account ? "}
           <span
-            className="cursor-pointer text-gray-800"
+            className="cursor-pointer text-indigo-800"
             onClick={handleToggleSign}
           >
             {toggleSign ? "Sign up here" : "Sign in here"}
